@@ -9,3 +9,6 @@ from django.contrib.auth.models import User
 
 def create_user(first_name, email, username, last_name=None, **extra_fields):
     pass
+
+def ServiceList():
+    service_name = service_name.get_service_name

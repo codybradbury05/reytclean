@@ -29,12 +29,11 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-codybradbury0-reytclean-n6y2vomx9ao.ws.codeinstitute-ide.net','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-codybradbury0-reytclean-n6y2vomx9ao.ws.codeinstitute-ide.net','.herokuapp.com', 'https://reytclean-9289dd45efa6.herokuapp.com/']
 
 
 # Django Appointment
 
-  # Optional if you use Django's user model
 APPOINTMENT_WEBSITE_NAME = 'ReytClean'
 
 Q_CLUSTER = {
@@ -46,7 +45,13 @@ Q_CLUSTER = {
    'bulk': 10,
    'orm': 'default',
 }
+
 USE_DJANGO_Q_FOR_EMAILS = True
+
+APPOINTMENT_BASE_TEMPLATE = 'base_templates/base.html'
+
+APP_DEFAULT_FROM_EMAIL = 'DEFAULT_FROM_EMAIL'  # Default email for sending notifications
+APP_TIME_ZONE = 'TIME_ZONE'  # Ensure the TIME_ZONE is set to your desired timezone
 
 # Application definition
 
