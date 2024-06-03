@@ -32,6 +32,22 @@ DEBUG = True
 ALLOWED_HOSTS = ['8000-codybradbury0-reytclean-n6y2vomx9ao.ws.codeinstitute-ide.net','.herokuapp.com']
 
 
+# Django Appointment
+
+  # Optional if you use Django's user model
+APPOINTMENT_WEBSITE_NAME = 'ReytClean'
+
+Q_CLUSTER = {
+   'name': 'DjangORM',
+   'workers': 4,
+   'timeout': 90,
+   'retry': 120,
+   'queue_limit': 50,
+   'bulk': 10,
+   'orm': 'default',
+}
+USE_DJANGO_Q_FOR_EMAILS = True
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +58,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'booking',
+    'appointment',
+    'django_q',
 ]
 
 MIDDLEWARE = [
